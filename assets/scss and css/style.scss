@@ -7,8 +7,11 @@ $primary-font:"Raleway";
 }
 
 body{
+    padding-left: 5px;
+    padding-right: 5px;
     font-family: $primary-font;
     font-weight: 400;
+    background-color: black;
 }
 
 nav{
@@ -41,9 +44,10 @@ nav{
         cursor: pointer;
     }
 
-    .logo{
+    .logo span{
         margin-left: 20px;
-        font-size: 25px;
+        font-size: 38px;
+        font-weight: 300;
     }
 
     .icons i{
@@ -61,6 +65,56 @@ nav{
     .fa-twitter:hover{color: #00acee;}
     .fa-github:hover{color: orange;}
 }
+
+.first-container-header{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    .photo-div{
+        position: relative;
+        border-radius: 10px;
+        background-image: url(/assets/img/IMG_3822.jpeg);
+        height: 400px;
+        width: 400px;
+        background-size: cover;
+        background-position: center bottom;
+        margin: auto;
+        h1{
+            font-size: 27px;
+            color: white;
+            font-weight: 400;
+            position: absolute;
+            top: 100%;
+        }
+        .photo-div-2{
+            position: absolute;
+            border-radius: 10px;
+            background-image: url(/assets/img/IMG_3822.jpeg);
+            height: 400px;
+            width: 400px;
+            background-size: cover;
+            background-position: center bottom;
+            bottom: 5%;
+            left: 5%;
+            z-index: -1;
+            opacity: .6;
+        }
+        .photo-div-3{
+            position: absolute;
+            border-radius: 10px;
+            background-image: url(/assets/img/IMG_3822.jpeg);
+            height: 400px;
+            width: 400px;
+            background-size: cover;
+            background-position: center bottom;
+            bottom: 10%;
+            left: 10%;
+            z-index: -2;
+            opacity: .2;
+        }
+    }
+}
+
 
 
 
@@ -80,7 +134,8 @@ nav{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: black;
+            background-color: rgb(0, 0, 0);
+            opacity: .9;
             transition: top 1s ease;
             display: none;
             li a{
@@ -133,6 +188,10 @@ nav{
             color: red;
             font-size: 1.5rem;
             opacity: .3;
+        }
+
+        .fa-minus:hover{
+            opacity: .9;
         }
 
 
