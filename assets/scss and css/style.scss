@@ -16,18 +16,19 @@ nav{
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100px;
 
     .mainMenu{
         display: flex;
         list-style: none;
         li a{
             display: inline;
-            padding: 15px;
             text-decoration: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 25px;
+            margin-right: 20px;
         }
-
         li a:hover{
             color: orange;
         }
@@ -41,20 +42,24 @@ nav{
     }
 
     .logo{
-        margin: 5px;
+        margin-left: 20px;
         font-size: 25px;
     }
 
-    .mainMenu .closeMenu, .icons i{
+    .icons i{
         font-size: 2rem;
         display: none;
         cursor: pointer;
     }
 
+    .closeMenu{
+        display: none;
+    }
+
     .fa-facebook:hover{color: #4267B2;}
     .fa-instagram:hover{color: #C13584;}
     .fa-twitter:hover{color: #00acee;}
-    .fa-github:hover{color: #ff8317;}
+    .fa-github:hover{color: orange;}
 }
 
 
@@ -69,7 +74,7 @@ nav{
             height: 100vh;
             position: fixed;
             top: 0;
-            right: 0;
+            right: 0px;
             left: 0;
             z-index: 10;
             flex-direction: column;
@@ -78,29 +83,58 @@ nav{
             background-color: black;
             transition: top 1s ease;
             display: none;
+            li a{
+                position: relative;
+                left: 10px;
+            }
         }
 
-        .closeMenu .mainMenu{
+        .closeMenu{
             display: block;
-            position: absolute;
-            top:20px;
-            right: 20px;
-
+            font-size: 30px;
         }
 
         .openMenu{
             display: block;
         }
+        
+        .openMenu .fa:active{
+            font-size: 2.1rem;
+            opacity: .8;
+        }
 
         .mainMenu li a:hover{
             background: none;
             color: orange;
+
+        }
+
+        .mainMenu li a:active{
+            color: orange;
+            opacity: .5;
             font-size: 1.6rem;
         }
 
         .icons i{
             display: inline;
-            padding: 12px;
+            padding: 15px;
         }
+
+        .icons i:hover{
+            font-size: 2.3rem;
+        }
+
+        .fa-times:hover{
+            color: red;
+            opacity: .5;
+        }
+
+        .fa-times:active{
+            color: red;
+            font-size: 1.5rem;
+            opacity: .3;
+        }
+
+
     }
 }
