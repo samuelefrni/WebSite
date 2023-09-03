@@ -1,76 +1,94 @@
-$primary-font:"Raleway";
+$primary-font: "Raleway";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family: $primary-font;
-    font-weight: 400;
+body {
     background-color: black;
 }
 
-nav{
+.wrapper {
+    font-family: $primary-font;
+    font-weight: 400;
+}
+
+nav {
     background-color: black;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-    .mainMenu{
+    .mainMenu {
         display: flex;
         list-style: none;
-        li a{
+
+        li a {
             display: inline;
             text-decoration: none;
             color: white;
             font-size: 25px;
             margin-right: 20px;
         }
-        li a:hover{
+
+        li a:hover {
             color: orange;
         }
     }
 
-    .openMenu{
+    .openMenu {
         font-size: 2rem;
         margin: 20px;
         display: none;
         cursor: pointer;
     }
 
-    .logo span{
+    .logo span {
         margin-left: 20px;
         font-size: 38px;
         font-weight: 300;
     }
 
-    .icons i{
+    .icons i {
         font-size: 2rem;
         display: none;
         cursor: pointer;
     }
 
-    .closeMenu{
+    .closeMenu {
         display: none;
     }
 
-    .fa-facebook:hover{color: #4267B2;}
-    .fa-instagram:hover{color: #C13584;}
-    .fa-twitter:hover{color: #00acee;}
-    .fa-github:hover{color: orange;}
+    .fa-facebook:hover {
+        color: #4267B2;
+    }
+
+    .fa-instagram:hover {
+        color: #C13584;
+    }
+
+    .fa-twitter:hover {
+        color: #00acee;
+    }
+
+    .fa-github:hover {
+        color: orange;
+    }
 }
 
-.first-container-header{
+.first-container-header {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    .photo-div{
+    padding: 20px;
+
+    .photo-div {
         position: relative;
         border-radius: 10px;
         background-image: url(/assets/img/IMG_3822.jpeg);
@@ -79,52 +97,76 @@ nav{
         background-size: cover;
         background-position: center bottom;
         margin: auto;
-        h1{
+
+        h1 {
             font-size: 27px;
             color: white;
             font-weight: 400;
             position: absolute;
             top: 100%;
         }
-        .photo-div-2{
-            position: absolute;
-            border-radius: 10px;
-            background-image: url(/assets/img/IMG_3822.jpeg);
-            height: 400px;
-            width: 400px;
-            background-size: cover;
-            background-position: center bottom;
-            bottom: 5%;
-            left: 5%;
-            z-index: -1;
-            opacity: .6;
-        }
-        .photo-div-3{
-            position: absolute;
-            border-radius: 10px;
-            background-image: url(/assets/img/IMG_3822.jpeg);
-            height: 400px;
-            width: 400px;
-            background-size: cover;
-            background-position: center bottom;
-            bottom: 10%;
-            left: 10%;
-            z-index: -2;
-            opacity: .2;
-        }
     }
 }
 
 
+.second-container-header {
+    color: white;
+    margin-top: 75px;
+    font-weight: 300;
+    font-size: 15px;
+
+}
+
+#about-me {
+    border: 1px solid red;
+    margin-top: 100px;
+
+    .third-container-header {
+        position: relative;
+        margin: auto;
+        margin-top: 35px;
+        height: 250px;
+        width: 250px;
+        background-image: url(/assets/img/WhatsApp\ Image\ 2023-02-13\ at\ 13.55.01.jpeg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        border-radius: 200px;
+        border: 2px solid white;
+        box-shadow: 0 0px 10px 0px gray;
+        p {
+            position: absolute;
+            color: white;
+            font-weight: 400;
+            font-size: 40px;
+            top: -27%;
+            left: -24%;
+        }
+
+    }
+
+    article {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 300;
+        color: white;
+        height: 300px;
+    }
+
+    button{
+        font-weight: 700;
+    }
+
+}
 
 
 
+/*@MEDIA*/
 
 
-
-@media only screen and (max-width: 800px){
-    nav{
-        .mainMenu{
+@media only screen and (max-width: 800px) {
+    nav {
+        .mainMenu {
             height: 100vh;
             position: fixed;
             top: 0;
@@ -138,62 +180,132 @@ nav{
             opacity: .9;
             transition: top 1s ease;
             display: none;
-            li a{
+
+            li a {
+                font-size: 30px;
                 position: relative;
-                left: 10px;
+                left: 5%;
+                top: 90%;
+            }
+
+            .closeMenu {
+                position: relative;
+                top: 40%;
             }
         }
 
-        .closeMenu{
+        .closeMenu {
             display: block;
-            font-size: 30px;
+            font-size: 40px;
         }
 
-        .openMenu{
+        .openMenu {
             display: block;
         }
-        
-        .openMenu .fa:active{
+
+        .openMenu .fa:active {
             font-size: 2.1rem;
             opacity: .8;
         }
 
-        .mainMenu li a:hover{
+        .mainMenu li a:hover {
             background: none;
             color: orange;
 
         }
 
-        .mainMenu li a:active{
+        .mainMenu li a:active {
             color: orange;
             opacity: .5;
             font-size: 1.6rem;
         }
 
-        .icons i{
+        .icons i {
             display: inline;
             padding: 15px;
         }
 
-        .icons i:hover{
+        .icons i:hover {
             font-size: 2.3rem;
         }
 
-        .fa-times:hover{
+        .fa-times:hover {
             color: red;
             opacity: .5;
         }
 
-        .fa-times:active{
+        .fa-times:active {
             color: red;
             font-size: 1.5rem;
             opacity: .3;
         }
 
-        .fa-minus:hover{
+        .fa-minus:hover {
             opacity: .9;
         }
 
 
+    }
+}
+
+
+@media only screen and (min-width: 800px){
+    .first-container-header {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    
+        .photo-div {
+            position: relative;
+            border-radius: 10px;
+            background-image: url(/assets/img/IMG_3822.jpeg);
+            height: 400px;
+            width: 400px;
+            background-size: cover;
+            background-position: center bottom;
+            margin: auto;
+    
+            h1 {
+                font-size: 27px;
+                color: white;
+                font-weight: 400;
+                position: absolute;
+                top: 100%;
+            }
+    
+            .photo-div-2 {
+                position: absolute;
+                border-radius: 10px;
+                background-image: url(/assets/img/IMG_3822.jpeg);
+                height: 400px;
+                width: 400px;
+                background-size: cover;
+                background-position: center bottom;
+                bottom: 5%;
+                left: 5%;
+                z-index: -1;
+                opacity: .6;
+            }
+    
+            .photo-div-3 {
+                position: absolute;
+                border-radius: 10px;
+                background-image: url(/assets/img/IMG_3822.jpeg);
+                height: 400px;
+                width: 400px;
+                background-size: cover;
+                background-position: center bottom;
+                bottom: 10%;
+                left: 10%;
+                z-index: -2;
+                opacity: .2;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 799px){
+    .first-container-header{
+        margin-top: 50px;
     }
 }
