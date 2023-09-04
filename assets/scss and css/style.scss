@@ -1,5 +1,6 @@
 $primary-font: "Raleway";
 $vampire-black: #080808;
+$Harvest-Gold:#da9100;
 
 * {
     margin: 0;
@@ -39,7 +40,7 @@ nav {
         }
 
         li a:hover {
-            color: orange;
+            color: $Harvest-Gold;
         }
     }
 
@@ -84,9 +85,8 @@ nav {
 }
 
 .first-container-header {
-    margin-top: 100px;
     display: flex;
-    justify-content: center;
+    margin-top: 100px;
     padding: 20px;
 
     .photo-div {
@@ -100,11 +100,13 @@ nav {
         margin: auto;
 
         h1 {
+            display: flex;
+            justify-content: start;
+            position: absolute;
+            top: 100%;
             font-size: 27px;
             color: white;
             font-weight: 400;
-            position: absolute;
-            top: 100%;
         }
     }
 }
@@ -115,48 +117,121 @@ nav {
     margin-top: 75px;
     font-weight: 300;
     font-size: 15px;
-
 }
 
 #about-me {
-    position: relative;
-    border: 1px solid red;
     margin-top: 100px;
-    display: flex;
-    justify-content: end;
-    .third-container-header{
-        border: 1px solid red;
-        height: 800px;
-        p{
-            position: absolute;
-            left: 1%;
-            top: 1%;
-            color: white;
-            font-weight: 400;
-            font-size: 50px;
+    height: 800px;
+    overflow: hidden;
+
+    .third-container-header {
+        p {
+            color: $Harvest-Gold;
+            font-weight: 600;
+            font-size: 35px;
+            margin-left: 10px;
         }
     }
 
-    article{
-        left: 1%;
-        top: 20%;
-        position: absolute;
+    article {
         color: white;
         font-weight: 400;
-        text-align:left;
-        line-height: 2.8rem;
-        section{
-            font-size: 40px;
+        
+
+        section {
+            font-size: 25px;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+        p {
+            color: white;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 2.5rem;
+            margin-left: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: orange;
+        }
+
+        a:hover {
+            opacity: .5;
+        }
+    }
+
+    .icons {
+        position: relative;
+        left: 20px;
+        top: 30px;
+        font-size: 25px;
+        color: white;
+
+        p{
+            font-size: 15x;
+            margin-right: 20px;
             font-weight: 600;
+        }
+
+        .fa-github {
+            margin-right: 75px;
+        }
+
+        .fa-instagram {
+            margin-right: 75px;
+        }
+
+        .fa-twitter {
+            margin-right: 75px;
+        }
+
+        .fa-facebook:hover {
+            color: #4267B2;
+        }
+
+        .fa-instagram:hover {
+            color: #C13584;
+        }
+
+        .fa-twitter:hover {
+            color: #00acee;
+        }
+
+        .fa-github:hover {
+            color: orange;
+        }
+
+        .fa-facebook:active {
+            opacity: .5;
+        }
+
+        .fa-instagram:active {
+            opacity: .5;
+        }
+
+        .fa-twitter:active {
+            opacity: .5;
+        }
+
+        .fa-github:active {
+            opacity: .5;
         }
     }
 
 }
 
+#portfolio{
+    
+    height: 500px;
+}
 
 
-/*@MEDIA*/
 
+
+
+/*@MEDIA NAV*/
 
 @media only screen and (max-width: 800px) {
     nav {
@@ -204,12 +279,12 @@ nav {
 
         .mainMenu li a:hover {
             background: none;
-            color: orange;
+            color: $Harvest-Gold;
 
         }
 
         .mainMenu li a:active {
-            color: orange;
+            color: $Harvest-Gold;
             opacity: .5;
             font-size: 1.6rem;
         }
@@ -242,13 +317,12 @@ nav {
     }
 }
 
+/*@MEDIA PHOTO HOME*/
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 801px) {
     .first-container-header {
         margin-top: 100px;
-        display: flex;
-        justify-content: center;
-    
+
         .photo-div {
             position: relative;
             border-radius: 10px;
@@ -258,7 +332,7 @@ nav {
             background-size: cover;
             background-position: center bottom;
             margin: auto;
-    
+
             h1 {
                 font-size: 27px;
                 color: white;
@@ -266,7 +340,7 @@ nav {
                 position: absolute;
                 top: 100%;
             }
-    
+
             .photo-div-2 {
                 position: absolute;
                 border-radius: 10px;
@@ -280,7 +354,7 @@ nav {
                 z-index: -1;
                 opacity: .6;
             }
-    
+
             .photo-div-3 {
                 position: absolute;
                 border-radius: 10px;
@@ -298,15 +372,16 @@ nav {
     }
 }
 
-@media only screen and (min-width: 1086px){
+/*@MEDIA ABOUT ME*/
+
+@media only screen and (min-width: 1200px) {
     #about-me {
         position: relative;
-        border: 1px solid red;
         margin-top: 100px;
         display: flex;
         justify-content: end;
-        .third-container-header{
-            border: 1px solid red;
+
+        .third-container-header {
             width: 700px;
             height: 800px;
             background-image: url(/assets/img/IMG_3822.jpeg);
@@ -314,71 +389,173 @@ nav {
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: center bottom;
-            p{
+
+            p {
                 position: absolute;
                 left: 1%;
                 top: 1%;
-                color: white;
-                font-weight: 400;
-                font-size: 50px;
+                color: $Harvest-Gold;
+                font-weight: 600;
+                font-size: 80px;
             }
         }
-    
-        article{
+
+        article {
             left: 1%;
-            top: 20%;
+            top: 18%;
             position: absolute;
             color: white;
-            font-weight: 400;
-            text-align:left;
-            section{
+            font-weight: 300;
+            text-align: left;
+            font-size: 20px;
+            line-height: 3.5rem;
+
+            a {
+                text-decoration: none;
+                color: orange;
+            }
+
+            a:hover {
+                opacity: .5;
+            }
+
+            section {
                 font-size: 40px;
-                font-weight: 600;
+                font-weight: 400;
+            }
+
+            p{
+                position: absolute;
+                top: 100%;
+                left: 1%;
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 3.5rem;
+
             }
         }
-    
+
+        .icons {
+            display: flex;
+            position: absolute;
+            top: 95%;
+            left: 1.5%;
+            font-size: 30px;
+            color: white;
+
+            p{
+                font-size: 20px;
+                margin-right: 20px;
+                font-weight: 600;
+            }
+
+            .fa-github {
+                margin-right: 20px;
+            }
+
+            .fa-instagram {
+                margin-right: 20px;
+            }
+
+            .fa-twitter {
+                margin-right: 20px;
+            }
+
+            .fa-facebook:hover {
+                color: #4267B2;
+            }
+
+            .fa-instagram:hover {
+                color: #C13584;
+            }
+
+            .fa-twitter:hover {
+                color: #00acee;
+            }
+
+            .fa-github:hover {
+                color: orange;
+            }
+
+            .fa-facebook:active {
+                opacity: .5;
+            }
+
+            .fa-instagram:active {
+                opacity: .5;
+            }
+
+            .fa-twitter:active {
+                opacity: .5;
+            }
+
+            .fa-github:active {
+                opacity: .5;
+            }
+        }
+
     }
 }
 
-
-@media only screen and (max-width: 767px){
-    #about-me {
-        position: relative;
-        border: 1px solid red;
-        margin-top: 100px;
-        display: flex;
-        justify-content: end;
+@media only screen and (min-width: 500px) and (max-width: 1199px){
+    #about-me{
         .third-container-header{
-            border: 1px solid red;
+            display: flex;
+            justify-content: center;
             p{
-                position: absolute;
-                left: 1%;
-                top: 1%;
-                color: white;
-                font-weight: 400;
-                font-size: 50px;
+                font-size: 60px;
             }
         }
-    
         article{
-            left: 1%;
-            top: 20%;
-            position: absolute;
-            color: white;
-            font-weight: 400;
-            text-align:left;
             section{
-                font-size: 40px;
-                font-weight: 600;
+                font-size: 35px;
+            }
+            p{
+                font-size: 25px;
+                font-weight: 300;
+                line-height: 3rem;
             }
         }
-    
+
     }
 }
 
+/*@MEDIA PORTFOLIO*/
 
-@media only screen and (max-width: 799px){
-    .first-container-header{
-        margin-top: 50px;
+@media only screen and (min-width: 1200px){
+    #portfolio{
+        .main-container{
+            position: relative;
+            width: 250px;
+            height: 320px;
+            .python{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: all 0.5 ease;
+            }
+            .python-front{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                background: red;
+                color: purple;
+            }
+            .python-back{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                background: orange;
+                color: purple;
+                transform: rotateY(180deg);
+            }
+            .python:hover{
+                transform: rotateY(180deg);
+            }
+        }
     }
+
 }
