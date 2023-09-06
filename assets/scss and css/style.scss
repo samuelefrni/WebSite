@@ -56,26 +56,29 @@ nav {
         font-weight: 300;
     }
 
-    .icons i {
-        font-size: 2rem;
-        display: none;
-        cursor: pointer;
+    .icons {
+        i{
+            font-size: 2rem;
+            display: none;
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
     }
 
     .closeMenu {
         display: none;
     }
 
-    .fa-facebook:hover {
+    .fa-linkedin:hover {
         color: #4267B2;
     }
 
     .fa-instagram:hover {
         color: #C13584;
-    }
-
-    .fa-twitter:hover {
-        color: #00acee;
     }
 
     .fa-github:hover {
@@ -120,14 +123,17 @@ nav {
 
 #about-me {
     margin-top: 100px;
-    height: 800px;
-    overflow: hidden;
+    height: 500px;
+    overflow: scroll;
 
     .third-container-header {
+        display: flex;
+        justify-content: center;
+
         h1 {
             color: $font-color;
             font-weight: 600;
-            font-size: 35px;
+            font-size: 60px;
             margin-left: 10px;
         }
     }
@@ -138,16 +144,21 @@ nav {
 
 
         section {
-            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 35px;
             font-weight: 400;
             margin-left: 10px;
         }
 
         p {
+            margin-top: 10px;
+            text-align: center;
             color: white;
             font-weight: 300;
-            font-size: 18px;
-            line-height: 2.5rem;
+            font-size: 22px;
+            line-height: 2rem;
             margin-left: 10px;
         }
 
@@ -162,6 +173,7 @@ nav {
     }
 
     .icons {
+        display: none;
         position: relative;
         left: 20px;
         top: 30px;
@@ -182,11 +194,11 @@ nav {
             margin-right: 75px;
         }
 
-        .fa-twitter {
+        .fa-linkedin {
             margin-right: 75px;
         }
 
-        .fa-facebook:hover {
+        .fa-linkedin:hover {
             color: #4267B2;
         }
 
@@ -202,15 +214,11 @@ nav {
             color: orange;
         }
 
-        .fa-facebook:active {
+        .fa-linkedin:active {
             opacity: .5;
         }
 
         .fa-instagram:active {
-            opacity: .5;
-        }
-
-        .fa-twitter:active {
             opacity: .5;
         }
 
@@ -222,8 +230,420 @@ nav {
 }
 
 #portfolio {
+    height: 800px;
+    margin-top: 100px;
 
-    height: 500px;
+    h2 {
+        font-size: 50px;
+        color: $font-color;
+        font-weight: 600;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+
+    p {
+        font-size: 50px;
+        color: white;
+        font-weight: 300;
+        margin-top: 100px;
+    }
+
+    /*PYTHON*/
+    .main-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+
+        .python {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition: all 1500ms ease;
+        }
+
+        .python-front {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            background-image: url(/assets/img/pytohn-code.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50);
+
+        }
+
+        .python-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+
+            h1 {
+                color: white;
+                font-weight: 600;
+            }
+
+            p {
+                margin: auto;
+                text-align: center;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 10px;
+                line-height: 2rem;
+                font-weight: 300;
+            }
+
+            .container-icon {
+                color: white;
+                font-size: 30px;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    .fa-github:hover {
+                        color: orange;
+                        font-size: 2rem;
+                    }
+
+                    .fa-linkedin:hover {
+                        color: blue;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .python:hover {
+            transform: rotateY(180deg);
+        }
+    }
+
+    /*SOLIDITY*/
+    .main-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+
+        .solidity {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition: all 1500ms ease;
+        }
+
+        .solidity-front {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            background-image: url(/assets/img/solidity.webp);
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50);
+        }
+
+        .solidity-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+            h1 {
+                color: white;
+                font-weight: 600;
+            }
+
+            p {
+                margin: auto;
+                text-align: center;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 10px;
+                line-height: 2rem;
+                font-weight: 300;
+            }
+
+            .container-icon {
+                color: white;
+                font-size: 30px;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    .fa-github:hover {
+                        color: orange;
+                        font-size: 2rem;
+                    }
+
+                    .fa-linkedin:hover {
+                        color: blue;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .solidity:hover {
+            transform: rotateY(180deg);
+        }
+    }
+
+    /*ETHEREUM*/
+    .main-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+
+        .ethereum {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition: all 1500ms ease;
+        }
+
+        .ethereum-front {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            background-image: url(/assets/img/ethereum.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50);
+        }
+
+        .ethereum-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+            h1::before {
+                color: white;
+                font-weight: 600;
+                text-align: center;
+                content: "ETH Protocol";
+            }
+
+            p {
+                margin: auto;
+                text-align: center;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 10px;
+                line-height: 2rem;
+                font-weight: 300;
+            }
+
+            .container-icon {
+                color: white;
+                font-size: 30px;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    .fa-github:hover {
+                        color: orange;
+                        font-size: 2rem;
+                    }
+
+                    .fa-linkedin:hover {
+                        color: blue;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .ethereum:hover {
+            transform: rotateY(180deg);
+        }
+    }
+
+    /*HTML*/
+    .main-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+
+        .html {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition: all 1500ms ease;
+        }
+
+        .html-front {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            background-image: url(/assets/img/html-css.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50);
+        }
+
+        .html-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+            h1 {
+                color: white;
+                font-weight: 600;
+            }
+
+            p {
+                margin: auto;
+                text-align: center;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 10px;
+                line-height: 2rem;
+                font-weight: 300;
+            }
+
+            .container-icon {
+                color: white;
+                font-size: 30px;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    .fa-github:hover {
+                        color: orange;
+                        font-size: 2rem;
+                    }
+
+                    .fa-linkedin:hover {
+                        color: blue;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .html:hover {
+            transform: rotateY(180deg);
+        }
+
+    }
+
+    /*StayTuned*/
+    .main-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+
+        .stay-tuned {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition: all 1500ms ease;
+        }
+
+        .stay-tuned-front {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50);
+        }
+
+        .stay-tuned-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+            h1 {
+                color: white;
+                font-weight: 600;
+            }
+
+            p {
+                margin: auto;
+                text-align: center;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 10px;
+                line-height: 2rem;
+                font-weight: 300;
+            }
+
+            .container-icon {
+                color: white;
+                font-size: 30px;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    .fa-github:hover {
+                        color: orange;
+                        font-size: 2rem;
+                    }
+
+                    .fa-linkedin:hover {
+                        color: blue;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .stay-tuned:hover {
+            transform: rotateY(180deg);
+        }
+
+    }
 }
 
 
@@ -288,9 +708,17 @@ nav {
             font-size: 1.6rem;
         }
 
-        .icons i {
-            display: inline;
-            padding: 15px;
+        .icons{
+
+            i{
+                display: inline;
+                padding: 15px;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
         }
 
         .icons i:hover {
@@ -375,6 +803,8 @@ nav {
 
 @media only screen and (min-width: 1200px) {
     #about-me {
+        overflow: hidden;
+        height: 800px;
         position: relative;
         margin-top: 100px;
         display: flex;
@@ -410,6 +840,10 @@ nav {
             font-size: 20px;
             line-height: 3.5rem;
 
+            section {
+                text-align: start;
+            }
+
             a {
                 text-decoration: none;
                 color: $font-color;
@@ -425,6 +859,7 @@ nav {
             }
 
             p {
+                text-align: start;
                 position: absolute;
                 top: 100%;
                 left: 1%;
@@ -443,6 +878,11 @@ nav {
             font-size: 30px;
             color: white;
 
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
             p {
                 font-size: 20px;
                 margin-right: 20px;
@@ -457,11 +897,11 @@ nav {
                 margin-right: 20px;
             }
 
-            .fa-twitter {
+            .fa-linkedin {
                 margin-right: 20px;
             }
 
-            .fa-facebook:hover {
+            .fa-linkedin:hover {
                 color: #4267B2;
             }
 
@@ -469,23 +909,15 @@ nav {
                 color: #C13584;
             }
 
-            .fa-twitter:hover {
-                color: #00acee;
-            }
-
             .fa-github:hover {
                 color: orange;
             }
 
-            .fa-facebook:active {
+            .fa-linkedin:active {
                 opacity: .5;
             }
 
             .fa-instagram:active {
-                opacity: .5;
-            }
-
-            .fa-twitter:active {
                 opacity: .5;
             }
 
@@ -497,55 +929,27 @@ nav {
     }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1199px) {
-    #about-me {
-        background-color: $primary-color;
-        .third-container-header {
-            display: flex;
-            justify-content: center;
-
-            h1 {
-                font-size: 60px;
-            }
-        }
-
-        article {
-            section {
-                font-size: 35px;
-            }
-
-            p {
-                font-size: 25px;
-                font-weight: 300;
-                line-height: 3rem;
-            }
-        }
-
-    }
-}
-
 /*@MEDIA PORTFOLIO*/
 
 @media only screen and (min-width: 1200px) {
     #portfolio {
-        border: 1px solid red;
         height: 800px;
         margin-top: 100px;
-        
-        h2{
+
+        h2 {
             font-size: 80px;
             color: $font-color;
             font-weight: 600;
         }
 
-        h3{
+        h3 {
             font-size: 50px;
             color: white;
             font-weight: 400;
             margin-bottom: 50px;
         }
 
-        p{
+        p {
             font-size: 50px;
             color: white;
             font-weight: 300;
@@ -563,7 +967,7 @@ nav {
                 width: 400px;
                 height: 200px;
                 transform-style: preserve-3d;
-                transition: all 0.5 ease;
+                transition: all 1500ms ease;
             }
 
             .python-front {
@@ -576,6 +980,7 @@ nav {
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 100%;
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50);
 
             }
 
@@ -586,6 +991,43 @@ nav {
                 border-radius: 20px;
                 backface-visibility: hidden;
                 transform: rotateY(180deg);
+                box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+
+                h1 {
+                    color: white;
+                    font-weight: 600;
+                }
+
+                p {
+                    margin: auto;
+                    text-align: center;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 13px;
+                    line-height: 2.5rem;
+                    font-weight: 300;
+                }
+
+                .container-icon {
+                    color: white;
+                    font-size: 30px;
+                    margin-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        .fa-github:hover {
+                            color: orange;
+                            font-size: 2rem;
+                        }
+
+                        .fa-linkedin:hover {
+                            color: blue;
+                            font-size: 2rem;
+                        }
+                    }
+                }
             }
 
             .python:hover {
@@ -604,7 +1046,7 @@ nav {
                 width: 400px;
                 height: 200px;
                 transform-style: preserve-3d;
-                transition: all 0.5 ease;
+                transition: all 1500ms ease;
             }
 
             .solidity-front {
@@ -617,6 +1059,7 @@ nav {
                 background-position: bottom left;
                 background-repeat: no-repeat;
                 background-size: 100%;
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50);
             }
 
             .solidity-back {
@@ -626,6 +1069,43 @@ nav {
                 backface-visibility: hidden;
                 border-radius: 20px;
                 transform: rotateY(180deg);
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+                h1 {
+                    color: white;
+                    font-weight: 600;
+                }
+
+                p {
+                    margin: auto;
+                    text-align: center;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 13px;
+                    line-height: 2.5rem;
+                    font-weight: 300;
+                }
+
+                .container-icon {
+                    color: white;
+                    font-size: 30px;
+                    margin-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        .fa-github:hover {
+                            color: orange;
+                            font-size: 2rem;
+                        }
+
+                        .fa-linkedin:hover {
+                            color: blue;
+                            font-size: 2rem;
+                        }
+                    }
+                }
             }
 
             .solidity:hover {
@@ -644,7 +1124,7 @@ nav {
                 width: 400px;
                 height: 200px;
                 transform-style: preserve-3d;
-                transition: all 0.5 ease;
+                transition: all 1500ms ease;
             }
 
             .ethereum-front {
@@ -657,6 +1137,7 @@ nav {
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 100%;
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50);
             }
 
             .ethereum-back {
@@ -666,6 +1147,45 @@ nav {
                 backface-visibility: hidden;
                 border-radius: 20px;
                 transform: rotateY(180deg);
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+                h1::before {
+                    color: white;
+                    font-weight: 600;
+                    text-align: center;
+                    content: "Ethereum Protocol";
+                }
+
+                p {
+                    margin: auto;
+                    text-align: center;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 13px;
+                    line-height: 2.5rem;
+                    font-weight: 300;
+                }
+
+                .container-icon {
+                    color: white;
+                    font-size: 30px;
+                    margin-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        .fa-github:hover {
+                            color: orange;
+                            font-size: 2rem;
+                        }
+
+                        .fa-linkedin:hover {
+                            color: blue;
+                            font-size: 2rem;
+                        }
+                    }
+                }
             }
 
             .ethereum:hover {
@@ -684,7 +1204,7 @@ nav {
                 width: 400px;
                 height: 200px;
                 transform-style: preserve-3d;
-                transition: all 0.5 ease;
+                transition: all 1500ms ease;
             }
 
             .html-front {
@@ -697,6 +1217,7 @@ nav {
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 100%;
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50);
             }
 
             .html-back {
@@ -706,12 +1227,126 @@ nav {
                 backface-visibility: hidden;
                 border-radius: 20px;
                 transform: rotateY(180deg);
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+                h1 {
+                    color: white;
+                    font-weight: 600;
+                }
+
+                p {
+                    margin: auto;
+                    text-align: center;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 13px;
+                    line-height: 2.5rem;
+                    font-weight: 300;
+                }
+
+                .container-icon {
+                    color: white;
+                    font-size: 30px;
+                    margin-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        .fa-github:hover {
+                            color: orange;
+                            font-size: 2rem;
+                        }
+
+                        .fa-linkedin:hover {
+                            color: blue;
+                            font-size: 2rem;
+                        }
+                    }
+                }
             }
 
             .html:hover {
                 transform: rotateY(180deg);
             }
 
+        }
+
+        /*StayTuned*/
+        .main-container {
+            position: relative;
+            width: 400px;
+            height: 200px;
+
+            .stay-tuned {
+                position: absolute;
+                width: 400px;
+                height: 200px;
+                transform-style: preserve-3d;
+                transition: all 1500ms ease;
+            }
+
+            .stay-tuned-front {
+                position: absolute;
+                width: 400px;
+                height: 200px;
+                backface-visibility: hidden;
+                background-image: none;
+                border-radius: 20px;
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50);
+            }
+
+            .stay-tuned-back {
+                position: absolute;
+                width: 400px;
+                height: 200px;
+                backface-visibility: hidden;
+                border-radius: 20px;
+                transform: rotateY(180deg);
+                box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
+
+                h1 {
+                    color: white;
+                    font-weight: 600;
+                }
+
+                p {
+                    margin: auto;
+                    text-align: center;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 13px;
+                    line-height: 2.5rem;
+                    font-weight: 300;
+                }
+
+                .container-icon {
+                    color: white;
+                    font-size: 30px;
+                    margin-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        .fa-github:hover {
+                            color: orange;
+                            font-size: 2rem;
+                        }
+
+                        .fa-linkedin:hover {
+                            color: blue;
+                            font-size: 2rem;
+                        }
+
+                    }
+
+                }
+            }
+
+            .stay-tuned:hover {
+                transform: rotateY(180deg);
+            }
         }
     }
 }
