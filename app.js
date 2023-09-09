@@ -13,3 +13,34 @@ function show(){
 function close(){
     mainMenu.style.top = '-100%';
 }
+
+var words = ['Samuele Furnari in 5 adjectives:', 'Public Speaker', 'Problem Solver', 'Enterprising', 'Empathetic', 'Resilient']
+var counter = 0;
+var word = document.getElementById("carousel_words");
+setInterval(update_carousel_words, 2000);
+function update_carousel_words(){
+    word.innerHTML = words[counter];
+    counter++;
+    if(counter >= words.length){
+        counter=0;
+    }
+}
+
+var portfolio_words = ['Find all my projects!', 'Follow me on LinkedIn!']
+var counter_portfolio = 0;
+var portfolio = document.getElementById("stay_tuned");
+setInterval(update_stay_tuned, 5000);
+function update_stay_tuned(){
+    portfolio.innerHTML = portfolio_words[counter_portfolio];
+    counter_portfolio++;
+    if(counter_portfolio >= 2){
+        counter_portfolio=0
+    }
+}
+  
+function closeDropdown() {
+    var menu = document.getElementById("menu");
+    menu.style.display = "none";
+}
+  
+

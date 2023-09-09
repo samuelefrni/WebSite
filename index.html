@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <!--HEAD SETTINGS-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,29 +27,40 @@
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!--OPEN GRAPH-->
+    <meta name="og:url" content="">
+    <meta name="og:title" content="Who is Samuele Furnari?">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="/assets/img/IMG_3822.jpeg">
+    <meta name="description" content="I'm Samuele Furnari, a blockchain developer student passionate about travel, sport, technology and...">
+
+    <!--TWITTER CARDS-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:title" content="Who is Samuele Furnari?">
+    <meta name="twitter:image" content="https://i.postimg.cc/YS4jNwMg/og-image.png">
+    <meta name="twitter:description" content="I'm Samuele Furnari, a blockchain developer student passionate about travel, sport, technology and...">
 
     <!--CSS-->
     <link rel="stylesheet" href="/assets/scss and css/style.css">
-
 </head>
 
 <body>
     <div class="wrapper">
 
         <!--NAVBAR-->
-        <nav>
-            <div class="logo"><span>HOME</span></h1>
-            </div>
+        <nav id="nav">
+            <div class="logo"><span>HOME</span></div>
             <div class="openMenu"><i class="fa fa-minus"></i></div>
-            <ul class="mainMenu">
-                <li><a href="#about-me">ABOUT ME</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#">CONTACT ME</a></li>
+            <ul id="menu" class="mainMenu">
+                <li><a href="#about-me" onclick="closeDropdown()">ABOUT ME</a></li>
+                <li><a href="#portfolio" onclick="closeDropdown()">PORTFOLIO</a></li>
+                <li><a href="#contact-me" onclick="closeDropdown()">CONTACT ME</a></li>
                 <div class="closeMenu"><i class="fa fa-times"></i></div>
                 <span class="icons">
-                    <a href="https://www.instagram.com/samuelefrni/" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a href="https://github.com/samuelefrni" target="_blank"><i class="fa fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/samuele-furnari-a37567220/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/samuelefrni" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/samuelefrni/" target="_blank"><i class="fa fa-instagram"></i></a>
                 </span>
             </ul>
         </nav>
@@ -59,16 +69,9 @@
         <header>
             <div class="first-container-header">
                 <div class="photo-div">
-                    <h1>Hello, i'm Samuele Furnari and...</h1>
+                    <h1 id="carousel_words">Samuele Furnari in 5 adjectives:</h1>
                     <div class="photo-div-2"></div>
                     <div class="photo-div-3"></div>
-                </div>
-            </div>
-
-            <div class="container-fluid second-container-header">
-                <div class="row">
-                    <div class="col-8 d-flex align-items-end">SAMUELE FURNARI</div>
-                    <div class="col-4 d-flex justify-content-end align-items-end">© 2023</div>
                 </div>
             </div>
 
@@ -81,10 +84,10 @@
                     <section>Samuele Furnari a blockchain<br>developer student based in Sicily</section>
                     <p>Hi, i'm Samuele Furnari, a 20 years old boy with a graphic design diploma.
                         I define myself as a lively and outgoing guy capable of working in a team, with a desire 
-                        to gain experience in the world of working and in the field of personal growht. Want to know more?<br><a href="#">LOOK AT MY CV!</a><br>
+                        to gain experience in the world of working and in the field of personal growht. Want to know more?<br><a href="/assets/CV/cv.html" target="_blank">LOOK AT MY CV!</a><br>
                         I like sport and in particoular i'am a big fan of footbal and mma.<br> I also like 
                         to travel and to shoot in the different place i go:<br> 
-                        <a href="#">IN WHICH PLACES HAVE I BEEN?</a>
+                        <a href="https://goo.gl/maps/RfLSiBcSNkbtaoHz8" target="_blank">IN WHICH PLACES HAVE I BEEN?</a>
                     </p>
                 </article>
                 <span class="icons">
@@ -101,7 +104,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-xl-12 d-flex justify-content-center"><h2>PORTFOLIO</h2></div>
-                    <div class="col-12 col-xl-12 d-flex justify-content-center"><h3>Here you can find all my projects!</h3></div>
+                    <div class="col-12 col-xl-12 d-flex justify-content-center"><h3 id="stay_tuned">Find all my projects!</h3></div>
                     <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
                         <div class="main-container my-4">
                             <div class="python">
@@ -111,8 +114,8 @@
                                     <p>Creation of a reporting system about cryptocurrencies. <br>Get the live information
                                     and store the results in a JSON file.</p>
                                     <div class="container-icon d-flex justify-content-center">
-                                        <a href="#"><div class="fa fa-github mx-3"></div></a>
-                                        <a href="#"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7075145399447003136/" target="_blank"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://github.com/samuelefrni/Python" target="_blank"><div class="fa fa-github mx-3"></div></a>
                                     </div>
                                 </div>  
                             </div>
@@ -127,8 +130,8 @@
                                     <p>Creation of a smart contract for an organization that would like to automate 
                                     their crowdfundings that organize monthly.</p>
                                     <div class="container-icon d-flex justify-content-center">
-                                        <a href="#"><div class="fa fa-github mx-3"></div></a>
-                                        <a href="#"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7075150176276946944/" target="_blank"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://github.com/samuelefrni/Solidity" target="_blank"><div class="fa fa-github mx-3"></div></a>
                                     </div>
                                 </div>  
                             </div>
@@ -142,8 +145,8 @@
                                     <div class="col-12 d-flex justify-content-center"><h1>HTML & CSS</h1></div>
                                     <p>Creation of my personal website, where i talk about me,<br> my passions and show my works.</p>
                                     <div class="container-icon d-flex justify-content-center">
-                                        <a href="#"><div class="fa fa-github mx-3"></div></a>
-                                        <a href="#"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="#portfolio"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://github.com/samuelefrni/WebSite" target="_blank"><div class="fa fa-github mx-3"></div></a>
                                     </div>
                                 </div>  
                             </div>
@@ -158,8 +161,8 @@
                                     <p>Research about Web3 tools, exploration of the most popular Ethereum protocols and 
                                     their functionalities.</p>
                                     <div class="container-icon d-flex justify-content-center">
-                                        <a href="#"><div class="fa fa-github mx-3"></div></a>
-                                        <a href="#"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7085173300770787328/" target="_blank"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://github.com/samuelefrni/Ethereum-Protocol" target="_blank"><div class="fa fa-github mx-3"></div></a>
                                     </div>
                                 </div>  
                             </div>
@@ -173,8 +176,8 @@
                                     <div class="col-12 d-flex justify-content-center"><h1>Stay Tuned!</h1></div>
                                     <p>Don't want to miss any new project?<br>Connect with my profiles to stay tuned!</p>
                                     <div class="container-icon d-flex justify-content-center">
-                                        <a href="#"><div class="fa fa-github mx-3"></div></a>
-                                        <a href="#"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://www.linkedin.com/in/samuele-furnari-a37567220/" target="_blank"><div class="fa fa-linkedin mx-3"></div></a>
+                                        <a href="https://github.com/samuelefrni" target="_blank"><div class="fa fa-github mx-3"></div></a>
                                     </div>
                                 </div>  
                             </div>
@@ -182,8 +185,35 @@
                     </div>
                 </div>   
             </div>
+
+        <!--CONTACT ME-->
+        <section id="contact-me">
+            <form action="https://formspree.io/f/xbjvyerk" method="post">
+                <h2>Have any questions?</h2>
+                <h3>Feel free to write me!</h3>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="subject"></label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <label for="textarea"></label>
+                <textarea id="message" name="message" rows="4" placeholder="Textarea"></textarea>
+                <button type="submit">Send</button>
+            </form> 
         </section>
 
+
+
+        <!--FOOTER-->
+        <section id="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6 d-flex align-items-end ">SAMUELE FURNARI</div>
+                    <div class="col-6 d-flex justify-content-end align-items-end">© 2023</div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!--JAVASCRIPT-->
