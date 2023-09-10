@@ -14,7 +14,7 @@ function close(){
     mainMenu.style.top = '-100%';
 }
 
-var words = ['Samuele Furnari in 5 adjectives:', 'Public Speaker', 'Problem Solver', 'Enterprising', 'Empathetic', 'Resilient']
+var words = ['5 words to describe me?', 'Public Speaker', 'Problem Solver', 'Enterprising', 'Empathetic', 'Resilient']
 var counter = 0;
 var word = document.getElementById("carousel_words");
 setInterval(update_carousel_words, 2000);
@@ -40,7 +40,9 @@ function update_stay_tuned(){
   
 function closeDropdown() {
     var menu = document.getElementById("menu");
-    menu.style.display = "none";
+    if(window.innerWidth <= 800) {
+        menu.style.display = "none";
+    }
 }
   
 
