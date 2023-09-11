@@ -48,6 +48,7 @@
         #line{
             border: 1px solid gray;
             border-radius: 10px;
+            opacity: .4;
         }
         #contact-information{
             color: rgb(50, 50, 137);
@@ -102,9 +103,37 @@
             line-height: 2.5rem;
             font-size: 18px;
         }
+        .button{
+            border-radius: 100vh;
+            background-color: #303576;
+            opacity: .8;
+            color: white;
+            font-size: 18px;
+            border: 0;
+            width: 200px;
+            height: 40px;
+        }
+        .button:hover{
+            opacity: 1;
+        }
+        #pdf{
+            color: rgb(50, 50, 137);
+            font-size: 20px;
+            font-weight: 700;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
         @media only screen and (max-width:900px){
             #photo{
                 display: none;
+
+            }
+            #pdf{
+                font-size: 18px;
+                text-align: center;
             }
         }
     </style>
@@ -132,7 +161,7 @@
     <div id="line" class="col-12"></div>
     <div id="three-container" class="container-fluid pb-3">
         <div class="row d-flex align-items-center">
-            <div id="contact-information" class="col-12 col-sm-4 px-5">DESCRIZIONE</div>
+            <div id="contact-information" class="col-12 col-sm-4 px-5 my-3">DESCRIZIONE</div>
             <div id="descrizione" class="col-12 col-sm-8 px-5">
                 <br>Sono un ragazzo solare e estroverso, con voglia di mettermi in gioco e fare nuove esperienze;<br>
                 Esperienze sia nell'ambito lavorativo sia in una sfera di crescita personale.<br>
@@ -144,7 +173,7 @@
     <div id="line" class="col-12"></div>
     <div id="four-container" class="container-fluid pb-3">
         <div class="row d-flex align-items-center">
-            <div id="contact-information" class="col-12 col-sm-4 px-5">ESPERIENZA<br><br>
+            <div id="contact-information" class="col-12 col-sm-4 px-5 my-3">ESPERIENZA<br><br>
             San Filippo del Mela<br>
             Nov 2022 - Set 2023</div>
             <div id="esperienza" class="col-12 col-sm-8 px-5">
@@ -159,7 +188,7 @@
     <div id="line" class="col-12"></div>
     <div id="five-container" class="container-fluid pb-3">
         <div class="row d-flex align-items-center">
-            <div id="contact-information" class="col-12 col-sm-4 px-5">ISTRUZIONE</div>
+            <div id="contact-information" class="col-12 col-sm-4 px-5 my-3">ISTRUZIONE</div>
             <div id="istruzione" class="col-12 col-sm-8 px-5">
                 <br>Diploma in Grafica e comunicazione<br>
                 I.T.E.T Leonardo Da Vinci<br>
@@ -173,7 +202,7 @@
     <div id="line" class="col-12"></div>
     <div id="six-container" class="container-fluid pb-3">
         <div class="row d-flex align-items-center">
-            <div id="contact-information" class="col-12 col-sm-4 px-5">COMPETENZE</div>
+            <div id="contact-information" class="col-12 col-sm-4 px-5 my-3">COMPETENZE</div>
             <div id="competenze" class="col-12 col-sm-8 px-5">
                 <br>-Programmazione in linguaggio Python<br>
                 -Programmazione in linguaggio Solidity<br>
@@ -189,7 +218,7 @@
     <div id="line" class="col-12"></div>
     <div id="seven-container" class="container-fluid pb-3">
         <div class="row d-flex align-items-center">
-            <div id="contact-information" class="col-12 col-sm-4 px-5">PROGETTI</div>
+            <div id="contact-information" class="col-12 col-sm-4 px-5 my-3">PROGETTI</div>
             <div id="progetti" class="col-12 col-sm-8 px-5">
                 <br>Esorto inoltre il lettore ad andare a visionare il mio profilo LinkedIn, per una visione dei progetti
                 da me realizzati inerenti alle competenze di programmazione da me dichiarate.<br>
@@ -200,12 +229,21 @@
     <div id="line" class="col-12"></div>
     <div id="eight-container" class="container-fluid pb-3">
         <div class="row d-flex align-items-center">
-            <div id="contact-information" class="col-12 col-sm-4 px-5">TRATTAMENTO DATI</div>
+            <div id="contact-information" class="col-12 col-sm-4 px-5 my-3">TRATTAMENTO DATI</div>
             <div id="trattamento-dati" class="col-12 col-sm-8 px-5">
                 <br><em>Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae ai sensi 
                     dell’art.13 del D.Lgs.196/2003 e all’art.13 del Regolamento UE 2016/679 per la protezione 
                     delle persone fisiche e giuridiche riguardo al trattamento dei dati personali.
                 </em>   
+            </div>
+        </div>
+    </div>
+    <div id="line" class="col-12"></div>
+    <div id="nine-container" class="container-fluid pb-3">
+        <div class="row d-flex align-items-center">
+            <div id="pdf" class="col-12 col-sm-4 px-5 my-3">PDF</div>
+            <div class="col-12 col-sm-8">
+                <a href="/assets/CV/CV.pdf" download="Samuele_Furnari|CV"><button class="col-5 button mx-5 my-5">SCARICA IL PDF</button></a>
             </div>
         </div>
     </div>
