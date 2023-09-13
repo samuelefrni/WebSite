@@ -115,8 +115,7 @@ nav {
 
 #about-me {
     margin-top: 200px;
-    height: 500px;
-    overflow:scroll;
+    height: 750px;
 
     .third-container-header {
         display: flex;
@@ -810,6 +809,12 @@ nav {
 }
 
 /*@MEDIA ABOUT ME*/
+
+@media only screen and (min-width: 550px) and (max-width: 1199px) {
+    #about-me{
+        height: 450px;
+    }
+}
 
 @media only screen and (min-width: 1200px) {
     #about-me {
