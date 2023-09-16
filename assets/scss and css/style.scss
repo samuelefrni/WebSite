@@ -121,7 +121,7 @@ nav {
         display: flex;
         justify-content: center;
 
-        h1 {
+        h2{
             color: $font-color;
             font-weight: 600;
             font-size: 60px;
@@ -230,9 +230,10 @@ nav {
             transform: rotateY(180deg);
             box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
 
-            h1 {
+            h2 {
                 color: white;
                 font-weight: 600;
+                font-size: 40px;
             }
 
             p {
@@ -308,9 +309,10 @@ nav {
             transform: rotateY(180deg);
             box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-            h1 {
+            h2 {
                 color: white;
                 font-weight: 600;
+                font-size: 40px;
             }
 
             p {
@@ -386,11 +388,11 @@ nav {
             transform: rotateY(180deg);
             box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-            h1::before {
+            h5::before {
                 color: white;
                 font-weight: 600;
-                text-align: center;
-                content: "ETH Protocol";
+                font-size: 40px;
+                content:"ETH Protocol";
             }
 
             p {
@@ -466,9 +468,10 @@ nav {
             transform: rotateY(180deg);
             box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-            h1 {
+            h2 {
                 color: white;
                 font-weight: 600;
+                font-size: 40px;
             }
 
             p {
@@ -541,9 +544,10 @@ nav {
             transform: rotateY(180deg);
             box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-            h1 {
+            h2 {
                 color: white;
                 font-weight: 600;
+                font-size: 40px;
             }
 
             p {
@@ -683,7 +687,6 @@ nav {
 }
 
 
-
 /*@MEDIA NAV*/
 
 @media only screen and (max-width: 800px) {
@@ -699,11 +702,13 @@ nav {
             justify-content: center;
             align-items: center;
             background-color: rgb(0, 0, 0);
-            opacity: .9;
+            opacity: 1;
             transition: top 1500ms ease;
             display: none;
 
             li a {
+                position: relative;
+                left: 3%;
                 font-size: 35px;
                 display: flex;
                 justify-content: center;
@@ -712,22 +717,20 @@ nav {
 
             .closeMenu {
                 position: relative;
-                top: 38%;
+                top: 30%;
                 display: block;
-                font-size: 40px;
+                font-size: 45px;
             }
         }
 
         .openMenu {
             display: block;
+            position: relative;
+            top: -5%;
         }
 
         .mainMenu li a:hover {
             color: $font-color;
-        }
-
-        .mainMenu li a:active {
-            font-size: 1.8rem;
         }
 
         .icons{
@@ -756,6 +759,7 @@ nav {
 /*@MEDIA PHOTO HOME*/
 
 @media only screen and (min-width: 801px) {
+
     .first-container-header {
         margin-top: 100px;
 
@@ -770,7 +774,7 @@ nav {
             margin: auto;
 
             h1 {
-                font-size: 27px;
+                font-size: 28px;
                 color: white;
                 font-weight: 400;
                 position: absolute;
@@ -835,7 +839,7 @@ nav {
             background-size: 100%;
             background-position: center bottom;
 
-            h1 {
+            h2 {
                 position: absolute;
                 left: 1%;
                 top: 1%;
@@ -1014,9 +1018,10 @@ nav {
                 transform: rotateY(180deg);
                 box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
 
-                h1 {
+                h2 {
                     color: white;
                     font-weight: 600;
+                    font-size: 40px;
                 }
 
                 p {
@@ -1092,9 +1097,10 @@ nav {
                 transform: rotateY(180deg);
                 box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-                h1 {
+                h2 {
                     color: white;
                     font-weight: 600;
+                    font-size: 40px;
                 }
 
                 p {
@@ -1170,11 +1176,11 @@ nav {
                 transform: rotateY(180deg);
                 box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-                h1::before {
+                h5::before {
                     color: white;
                     font-weight: 600;
-                    text-align: center;
-                    content: "Ethereum Protocol";
+                    font-size: 40px;
+                    content:"Ethereum Protocol";
                 }
 
                 p {
@@ -1250,9 +1256,10 @@ nav {
                 transform: rotateY(180deg);
                 box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-                h1 {
+                h2 {
                     color: white;
                     font-weight: 600;
+                    font-size: 40px;
                 }
 
                 p {
@@ -1326,9 +1333,10 @@ nav {
                 transform: rotateY(180deg);
                 box-shadow: 0 0 3px 1px rgba(50, 50, 50, 0.25);
 
-                h1 {
+                h2 {
                     color: white;
                     font-weight: 600;
+                    font-size: 40px;
                 }
 
                 p {
@@ -1371,5 +1379,3 @@ nav {
         }
     }
 }
-
-
