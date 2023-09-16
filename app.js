@@ -14,7 +14,7 @@ function close(){
     mainMenu.style.top = '-100%';
 }
 
-var words = ['Samuele Furnari\'s portfolio', '5 words to describe me?', 'Public Speaker', 'Problem Solver', 'Enterprising', 'Empathetic', 'Resilient']
+var words = ['Samuele Furnari\'s Portfolio', '5 words to describe me?', 'Public Speaker', 'Problem Solver', 'Enterprising', 'Empathetic', 'Resilient']
 var counter = 0;
 var word = document.getElementById("carousel_words");
 setInterval(update_carousel_words, 2000);
