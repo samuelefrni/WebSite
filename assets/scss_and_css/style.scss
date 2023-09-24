@@ -34,7 +34,7 @@ nav {
             display: inline;
             text-decoration: none;
             color: white;
-            font-size: 25px;
+            font-size: 24px;
             margin-right: 20px;
         }
 
@@ -50,10 +50,11 @@ nav {
         cursor: pointer;
     }
 
-    .logo span {
+    .logo h1 {
         margin-left: 20px;
-        font-size: 38px;
-        font-weight: 300;
+        font-size: 30px;
+        font-weight: 400;
+
     }
 
     .icons {
@@ -86,30 +87,44 @@ nav {
     }
 }
 
+header{
+    margin-top: 80px;
+}
+
 .first-container-header {
     display: flex;
+    flex-direction: column;
     margin-top: 100px;
-    padding: 20px;
+    padding: 15px;
+    max-width: 400px;
+    height: 400px;
+    min-width: 300px;
+    margin: auto;
 
-    .photo-div {
-        position: relative;
-        border-radius: 10px;
-        background-image: url(/assets/img/IMG_3822.jpeg);
-        height: 400px;
-        width: 400px;
-        background-size: cover;
-        background-position: center bottom;
+    img{
         margin: auto;
+        border-radius: 10px;
+        width: 100%;
+        max-height: 400px;
+    }
 
-        h1 {
-            display: flex;
-            justify-content: start;
-            position: absolute;
-            top: 100%;
-            font-size: 27px;
-            color: white;
-            font-weight: 400;
-        }
+    p {
+        margin: auto;
+        font-size: 28px;
+        color: white;
+        font-weight: 400;
+    }
+
+    #img-2{
+        display: none;
+    }
+
+    #img-3{
+        display: none;
+    }
+
+    #img-4{
+        display: none;
     }
 }
 
@@ -117,15 +132,21 @@ nav {
     margin-top: 200px;
     height: 700px;
 
-    .third-container-header {
+    h2{
+        display: flex;
+        justify-content: center;
+        color: $font-color;
+        font-weight: 600;
+        font-size: 53px;
+        margin-left: 10px;
+    }
+
+    .photo-container{
         display: flex;
         justify-content: center;
 
-        h2{
-            color: $font-color;
-            font-weight: 600;
-            font-size: 60px;
-            margin-left: 10px;
+        img{
+            display: none;
         }
     }
 
@@ -173,7 +194,7 @@ nav {
     margin-top: 200px;
 
     h2 {
-        font-size: 60px;
+        font-size: 53px;
         color: $font-color;
         font-weight: 600;
     }
@@ -691,6 +712,10 @@ nav {
 
 @media only screen and (max-width: 800px) {
     nav {
+        .logo h1{
+            font-size: 25px;
+        }
+
         .mainMenu {
             height: 100%;
             position: fixed;
@@ -709,7 +734,7 @@ nav {
             li a {
                 position: relative;
                 left: 3%;
-                font-size: 35px;
+                font-size: 34px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -717,7 +742,8 @@ nav {
 
             .closeMenu {
                 position: relative;
-                top: 30%;
+                top: -53%;
+                left: 45%;
                 display: block;
                 font-size: 45px;
             }
@@ -761,53 +787,58 @@ nav {
 @media only screen and (min-width: 801px) {
 
     .first-container-header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
         margin-top: 100px;
-
-        .photo-div {
-            position: relative;
-            border-radius: 10px;
-            background-image: url(/assets/img/IMG_3822.jpeg);
-            height: 400px;
-            width: 400px;
-            background-size: cover;
-            background-position: center bottom;
+        padding: 15px;
+        max-width: 400px;
+        height: 400px;
+        min-width: 300px;
+        margin: auto;
+    
+        img{
             margin: auto;
+            border-radius: 10px;
+            width: 100%;
+            max-height: 400px;
+            z-index: 0;
+        }
 
-            h1 {
-                font-size: 28px;
-                color: white;
-                font-weight: 400;
-                position: absolute;
-                top: 100%;
-            }
+        #img-2{
+            display: block;
+            position: absolute;
+            border-radius: 10px;
+            opacity: .5;
+            left: 3.3%;
+            bottom: 4%;
+            z-index: -1;
+        }
 
-            .photo-div-2 {
-                position: absolute;
-                border-radius: 10px;
-                background-image: url(/assets/img/IMG_3822.jpeg);
-                height: 400px;
-                width: 400px;
-                background-size: cover;
-                background-position: center bottom;
-                bottom: 5%;
-                left: 5%;
-                z-index: -1;
-                opacity: .6;
-            }
+        #img-3{
+            display: block;
+            position: absolute;
+            opacity: .3;
+            left: 9.9%;
+            bottom: 12%;
+            z-index: -2;
+        }
 
-            .photo-div-3 {
-                position: absolute;
-                border-radius: 10px;
-                background-image: url(/assets/img/IMG_3822.jpeg);
-                height: 400px;
-                width: 400px;
-                background-size: cover;
-                background-position: center bottom;
-                bottom: 10%;
-                left: 10%;
-                z-index: -2;
-                opacity: .2;
-            }
+        #img-4{
+            display: block;
+            position: absolute;
+            opacity: .1;
+            left: 16%;
+            bottom: 20%;
+            z-index: -3;
+        }
+
+    
+        p {
+            margin: auto;
+            font-size: 28px;
+            color: white;
+            font-weight: 400;
         }
     }
 }
@@ -829,23 +860,25 @@ nav {
         display: flex;
         justify-content: end;
 
-        .third-container-header {
-            width: 700px;
-            height: 800px;
-            background-image: url(/assets/img/IMG_3822.jpeg);
-            border-radius: 50px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center bottom;
+        h2 {
+            position: absolute;
+            left: 1%;
+            color: $font-color;
+            font-weight: 600;
+            font-size: 80px;
+        }
 
-            h2 {
+        .photo-container{
+            position: relative;
+            height: 800px;
+            width: 700px;
+            border-radius: 50px;
+            img{
+                display: block;
                 position: absolute;
-                left: 1%;
-                top: 1%;
-                color: $font-color;
-                font-weight: 600;
-                font-size: 80px;
+                width: 85%;
+                border-radius: 50px;
+                
             }
         }
 
